@@ -35,14 +35,19 @@ export default function ResultPage() {
   const otherMatches = MOCK_RESULTS.slice(1);
 
   const handleShare = async () => {
-    const shareText = "I am 94% WOLF – what is your therian? [therian-app.vercel.app]";
+    const shareText = `I am ${topMatch.score}% ${topMatch.animal.toUpperCase()} ${topMatch.emoji} – what's your therian?`;
+    const shareUrl = "https://therian-app-iota.vercel.app";
 
     try {
-      await navigator.clipboard.writeText(shareText);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (navigator.share) {
+        await navigator.share({ title: "THERIAN.", text: shareText, url: shareUrl });
+      } else {
+        await navigator.clipboard.writeText(`${shareText} → ${shareUrl}`);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
     } catch {
-      setCopied(false);
+      // user cancelled or error — do nothing
     }
   };
 

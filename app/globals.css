@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-amber: #FFAA00;
+}
+
 body {
   background: #000000;
   color: #ffffff;

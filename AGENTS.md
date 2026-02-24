@@ -6,12 +6,6 @@ Before implementing anything, read the project notes in the Obsidian vault:
 
 **Vault path:** `/Users/marcjaner/Documents/marcjaner/marcjaner/therian-app/`
 
-Files:
-- `project-summary.md` — what this is and why
-- `mvp-spec.md` — full feature spec, scope, and constraints
-- `design.md` — visual design decisions (colors, typography, layout)
-- `agent-notes.md` — implementation notes and decisions log
-
 ## Key Decisions (quick ref)
 
 - **Stack:** Next.js (App Router) + Vercel + Stripe + `@vercel/og`

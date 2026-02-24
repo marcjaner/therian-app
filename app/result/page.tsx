@@ -108,12 +108,14 @@ export default function ResultPage() {
           <p className="mt-2 text-sm font-medium">
             See all 8 animals, voice breakdown, and your therian history.
           </p>
-          <button
-            type="button"
-            className="mt-4 w-full bg-black px-4 py-3 text-sm font-extrabold tracking-[0.1em] text-amber"
+          <a
+            href="https://buy.stripe.com/8x2cN74GrfJcgmv0GBfw402"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 block w-full bg-black px-4 py-3 text-center text-sm font-extrabold tracking-[0.1em] text-amber"
           >
-            JOIN WAITLIST
-          </button>
+            JOIN WAITLIST →
+          </a>
         </section>
       </div>
     </main>
